@@ -119,16 +119,6 @@ async def on_message(message):
             await message.channel.send(embed=tlfvoEmbed)
             print(f'{message.author} 님이 잘못된 숫자로 인해 인증을 실패함.')
 
-    if message.content.startswith(''):
-        file = openpyxl.load_workbook('log.xlsx')
-        work = message.content
-        sheet = file.active
-        for i in range(1, 51):
-            if sheet['A' + str(i)].value == work:
-                await message.channel.send(
-                    sheet['B' + str(i)].value )
-                break
-
     if message.content.startswith("집합"):
         await message.channel.send("네")
 
