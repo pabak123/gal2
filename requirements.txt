@@ -6,3 +6,4 @@ captcha==0.3
 requests==2.25.1
 discord-timers==0.1.0
 urllib3==1.26.2
+async-timeout==3.0.1
