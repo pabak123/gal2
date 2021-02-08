@@ -1,7 +1,6 @@
 import discord
 import os
 from captcha.image import ImageCaptcha
-from googletrans import Translator
 import asyncio
 from discord import Client
 from bs4 import BeautifulSoup
@@ -119,21 +118,6 @@ async def on_message(message):
             tlfvoEmbed.add_field(name='이유', value='잘못된 숫자', inline=False)
             await message.channel.send(embed=tlfvoEmbed)
             print(f'{message.author} 님이 잘못된 숫자로 인해 인증을 실패함.')
-
-    if message.content.startswith('상갈아배워'):
-        file = openpyxl.load_workbook('log.xlsx')
-        work = message.content.split(' ')
-        sheet = file.active
-        for i in range(1, 51):
-            if sheet['A' + str(i)].value == '-' or sheet['A' + str(i)].value == work[1]:
-                sheet['A' + str(i)].value = work[1]
-                sheet['B' + str(i)].value = work[2]
-                sheet['C' + str(i)].value = message.author.name
-                embed = discord.Embed(colour=discord.Colour(0x7C77FF))
-                embed.set_author(name=f'이제 {work[1]} 이라고 말하면 {work[2]} 라고 말할게요.')
-                await message.channel.send(embed=embed)
-                break
-        file.save('log.xlsx')
 
     if message.content.startswith(''):
         file = openpyxl.load_workbook('log.xlsx')
