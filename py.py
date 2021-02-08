@@ -18,7 +18,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print("봇이 성공적으로 실행되었습니다.")
-    game = discord.Game('상갈아 도움')
+    game = discord.Game('상갈아 도움을 쳐보세요!')
     await client.change_presence(status=discord.Status.online)
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="상갈아 도움"))
 
