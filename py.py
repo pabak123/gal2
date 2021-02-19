@@ -60,7 +60,13 @@ async def on_message(message):
             embed1.set_author(name=f'{message.mentions[0].name} 님을 언뮤트 하였습니다.',
                               icon_url=(client.get_user(int(message.mentions[0].id)).avatar_url))
             await message.channel.send(embed=embed1)
-
+    
+    if "개새끼" in message.content or "씨발" in message.content or "바보" in message.content or "ㄴ7ㅁ" in message.content or "맹현서" in message.content or "시발" in message.content or "시발" in message.content or "새끼" in message.content:
+        embed = discord.Embed(timestamp=message.created_at, colour=discord.Colour.red(), title=":no_entry_sign: | 경고!", description=f"{message.author.mention}님 욕하지 마세요")
+        await message.channel.send(embed=embed)
+        await message.delete()
+            
+            
     if message.content.startswith('!청소'):
         try:
             # 메시지 관리 권한 있을시 사용가능
