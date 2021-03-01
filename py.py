@@ -76,7 +76,96 @@ async def on_message(message):
                 await message.channel.send('``명령어 사용권한이 없습니다.``')
         except:
             pass
+    
+    if message.content.startswith('상갈아 시간표'):
+    
+        embed = discord.Embed(title="각반의 시간표를 확인하시려면 아래 이모지를 클릭해주세요!", description="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_footer(text="시간표 업데이트는 매주 월요일마다 갱신됩니다!") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("✌️")
+        await msg.add_reaction("🤏")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
 
+    if message.content.startswith('page1sigan'):
+        await message.delete()
+        embed = discord.Embed(title="3-1반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815172954802487346/e28905914108d9bd.png")
+        embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("🤏")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
+
+    if message.content.startswith('page2sigan'):
+        await message.delete()
+        embed = discord.Embed(title="3-2반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815173786529431584/3-2.png")
+        embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("✌️")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
+
+    if message.content.startswith('page3sigan'):
+        await message.delete()
+        embed = discord.Embed(title="3-3반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815174385350344704/3-3.png")
+        embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("✌️")
+        await msg.add_reaction("🤏")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
+
+    if message.content.startswith('page4sigan'):
+        await message.delete()
+        embed = discord.Embed(title="3-4반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815173786529431584/3-2.png")
+        embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("✌️")
+        await msg.add_reaction("🤏")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
+
+    if message.content.startswith('page5sigan'):
+        await message.delete()
+        embed = discord.Embed(title="3-5반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815852014416298015/3-5.png")
+        embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("✌️")
+        await msg.add_reaction("🤏")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
+
+    if message.content.startswith('page6sigan'):
+        await message.delete()
+        embed = discord.Embed(title="3-6반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815853097649045535/3-6.png")
+        embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
+        await msg.add_reaction("✌️")
+        await msg.add_reaction("🤏")
+        await msg.add_reaction("✋")
+        await msg.add_reaction("✍️")
+        await msg.add_reaction("👐")
+        await msg.add_reaction("🤚")
+        
+        
     if message.content.startswith("상갈아 인증"): #명령어 /인증
         a = ""
         Captcha_img = ImageCaptcha()
@@ -556,6 +645,30 @@ async def on_reaction_add(reaction, user):
         await reaction.message.channel.send("pagejodmopage3")
         await reaction.message.delete()
 
+    if str(reaction.emoji) == "✌️":
+        await reaction.message.channel.send("page1sigan")
+        await reaction.message.delete()
+
+    if str(reaction.emoji) == "🤏":
+        await reaction.message.channel.send("page2sigan")
+        await reaction.message.delete()
+
+    if str(reaction.emoji) == "✋":
+        await reaction.message.channel.send("page3sigan")
+        await reaction.message.delete()
+
+    if str(reaction.emoji) == "✍️":
+        await reaction.message.channel.send("page4sigan")
+        await reaction.message.delete()
+
+    if str(reaction.emoji) == "👐":
+        await reaction.message.channel.send("page5sigan")
+        await reaction.message.delete()
+
+    if str(reaction.emoji) == "🤚":
+        await reaction.message.channel.send("page6sigan")
+        await reaction.message.delete()
+        
     if str(reaction.emoji) == "❌":
         await reaction.message.delete()
 
