@@ -60,7 +60,13 @@ async def on_message(message):
             embed1.set_author(name=f'{message.mentions[0].name} 님을 언뮤트 하였습니다.',
                               icon_url=(client.get_user(int(message.mentions[0].id)).avatar_url))
             await message.channel.send(embed=embed1)
-   
+
+    if message.content.startswith('상갈아 일과시간표'):
+
+        embed = discord.Embed(title="2021년 상갈중학교 일과 시간표", description="", url="", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed.set_image(url="https://cdn.discordapp.com/attachments/808236879924297750/816158619875016704/KakaoTalk_20210302_095652516.png")
+        embed.set_footer(text="Made by K.G") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+        msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.            
             
     if message.content.startswith('!청소'):
         try:
