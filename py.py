@@ -433,8 +433,7 @@ async def on_message(message):
     if message.content.startswith('상갈아 디엠'):
         if message.author.guild_permissions.manage_messages:
             msg = message.content[26:]
-            embed = discord.Embed(title="상갈이 DM", description="{msg}", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
-            embed.set_footer(text="상갈 디스코드") # 하단에 들어가는 조그마한 설명을 잡아줍니다
+            await message.mentions[0].send(f"{msg}")
             await message.channel.send(f'`{message.mentions[0]}`에게 DM을 보냈습니다')
         else:
             return
