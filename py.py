@@ -431,6 +431,7 @@ async def on_message(message):
                     if message.author.guild_permissions.manage_messages:
                         embed = discord.Embed(color=0x1DDB16, timestamp=message.created_at)
                         embed.add_field(name="상갈 DM", value=msg, inline=True)
+                        embed.set_footer(text="상갈 ")
                         await i.send(embed=embed)
                 except:
                     pass
