@@ -420,6 +420,21 @@ async def on_message(message):
         embed.set_footer(text="상갈") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
 
+    if message.content.startswith('/dm'):
+        for i in message.guild.members:
+            if i.bot == True:
+                pass
+            else:
+                try:
+                    msg = message.content[4:]
+                    #메시지 관리권한이 있을시 사용가능
+                    if message.author.guild_permissions.manage_messages:
+                        embed = discord.Embed(color=0x1DDB16, timestamp=message.created_at)
+                        embed.add_field(name="상갈 DM", value=msg, inline=True)
+                        await i.send(embed=embed)
+                except:
+                    pass
+        
     if message.guild is None:
         if message.author.bot:
             return
@@ -432,7 +447,7 @@ async def on_message(message):
 
     if message.content.startswith('상갈아 디엠'):
         if message.author.guild_permissions.manage_messages:
-            msg = message.content[]
+            msg = message.content[26:]
             await message.mentions[0].send(f"{msg}")
             await message.channel.send(f'`{message.mentions[0]}`에게 DM을 보냈습니다')
         else:
