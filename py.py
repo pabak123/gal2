@@ -344,24 +344,6 @@ async def on_message(message):
         except:
             pass
     
-    if message.content.startswith('상갈아 실검'):
-        json = requests.get('https://www.naver.com/srchrank?frm=main').json()
-        ranks = json.get("data")
-        data = []
-        for r in ranks:
-            rank = r.get("rank")
-            keyword = r.get("keyword")
-            if rank > 10:
-                break
-            data.append(f'**{rank}**위 {keyword}')
-
-        dat = str(data)
-        dat = dat.replace("'","")
-        dat = dat.replace(", ","\n")
-        dat = dat[1:-1]
-        print(dat)
-        embed = discord.Embed(title= '네이버 실시간 검색어 순위', description=(dat),colour=0x19CE60)
-        await message.channel.send(embed=embed)
     
     if message.content.startswith('상갈아 도움'):
         embed = discord.Embed(title="상갈이의 명령어", description="상갈이에 대해 더 잘 알고 싶다고요? 아래 내용을 잘봐보세요!", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
