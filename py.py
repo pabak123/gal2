@@ -1,11 +1,13 @@
 import discord
-import os
+from urllib.request import urlopen, Request
 from captcha.image import ImageCaptcha
+import os
 import asyncio
 from discord import Client
 from bs4 import BeautifulSoup
 import requests
 import urllib
+import urllib.request
 import openpyxl
 import random
 import time
@@ -51,6 +53,31 @@ async def on_message(message):
                               icon_url=(client.get_user(int(message.mentions[0].id)).avatar_url))
             await message.channel.send(embed=embed1)
 
+    if message.content == '상갈아 실검' or message.content == '상갈아 실시간검색어':
+        url = 'http://issue.zum.com/'
+        req = Request(url)
+        html = urllib.request.urlopen(req)
+        soup = BeautifulSoup(html, "html.parser")
+
+        s = soup.find_all('div', {'class': 'cont'})
+
+        rank = 1
+        data = []
+        for title in s:
+            tt = title.find('span', {'class': 'word'}).text
+            data.append(f'**{rank}**. {tt}')
+            rank += 1
+            if rank > 10:
+                break
+
+        dat = str(data)
+        dat = dat.replace("'", "")
+        dat = dat.replace(", ", "\n")
+        dat = dat[1:-1]
+        embed = discord.Embed(title='줌 실시간 검색어 순위', description=dat, colour=0x19CE60)
+        await message.channel.send(embed=embed)
+
+            
     if message.content.startswith('상갈아 언뮤트'):
         if message.author.guild_permissions.manage_messages:
             await message.delete()
