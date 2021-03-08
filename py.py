@@ -432,7 +432,7 @@ async def on_message(message):
 
     if message.content.startswith('상갈아 디엠'):
         if message.author.guild_permissions.manage_messages:
-            msg = message.content[26:]
+            msg = message.content[]
             await message.mentions[0].send(f"{msg}")
             await message.channel.send(f'`{message.mentions[0]}`에게 DM을 보냈습니다')
         else:
