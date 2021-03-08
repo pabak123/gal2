@@ -74,7 +74,7 @@ async def on_message(message):
         dat = dat.replace("'", "")
         dat = dat.replace(", ", "\n")
         dat = dat[1:-1]
-        embed = discord.Embed(title='줌 실시간 검색어 순위', description=dat, colour=0x19CE60)
+        embed = discord.Embed(title='줌 실시간 검색어 순위', description=dat, colour=0x2f3136)
         await message.channel.send(embed=embed)
 
             
@@ -112,7 +112,7 @@ async def on_message(message):
     
     if message.content.startswith('상갈아 시간표'):
     
-        embed = discord.Embed(title="각반의 시간표를 확인하시려면 아래 이모지를 클릭해주세요!", description="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="각반의 시간표를 확인하시려면 아래 이모지를 클릭해주세요!", description="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_footer(text="시간표 업데이트는 매주 월요일마다 갱신됩니다!") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
         await msg.add_reaction("✌️")
@@ -124,7 +124,7 @@ async def on_message(message):
 
     if message.content.startswith('page1sigan'):
         await message.delete()
-        embed = discord.Embed(title="3-1반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="3-1반 시간표", description="", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815172954802487346/e28905914108d9bd.png")
         embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
@@ -136,7 +136,7 @@ async def on_message(message):
 
     if message.content.startswith('page2sigan'):
         await message.delete()
-        embed = discord.Embed(title="3-2반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="3-2반 시간표", description="", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815173786529431584/3-2.png")
         embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
@@ -148,7 +148,7 @@ async def on_message(message):
 
     if message.content.startswith('page3sigan'):
         await message.delete()
-        embed = discord.Embed(title="3-3반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="3-3반 시간표", description="", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815174385350344704/3-3.png")
         embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
@@ -161,7 +161,7 @@ async def on_message(message):
 
     if message.content.startswith('page4sigan'):
         await message.delete()
-        embed = discord.Embed(title="3-4반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="3-4반 시간표", description="", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815173786529431584/3-2.png")
         embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
@@ -174,7 +174,7 @@ async def on_message(message):
 
     if message.content.startswith('page5sigan'):
         await message.delete()
-        embed = discord.Embed(title="3-5반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="3-5반 시간표", description="", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815852014416298015/3-5.png")
         embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
@@ -187,7 +187,7 @@ async def on_message(message):
 
     if message.content.startswith('page6sigan'):
         await message.delete()
-        embed = discord.Embed(title="3-6반 시간표", description="", url="http://컴시간학생.kr/", color=0x62c1cc) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
+        embed = discord.Embed(title="3-6반 시간표", description="", url="http://컴시간학생.kr/", color=0x2f3136) # Embed의 기본 틀(색상, 메인 제목, 설명)을 잡아줍니다
         embed.set_image(url="https://cdn.discordapp.com/attachments/791458709976383538/815853097649045535/3-6.png")
         embed.set_footer(text="✌️:1반 🤏:2반 ✋:3반 ✍️:4반 👐:5반 🤚:6반") # 하단에 들어가는 조그마한 설명을 잡아줍니다
         msg = await message.channel.send(embed=embed) # embed를 포함 한 채로 메시지를 전송합니다.
@@ -319,7 +319,7 @@ async def on_message(message):
         todaydead = soup.select('span.txt_ntc')[2].text  # 당일 사망자
         # print(f'사망자: {todaydead} 명')
 
-        covidembed = discord.Embed(title='코로나19 국내 발생현황', description="", color=0xFF0F13, url='http://ncov.mohw.go.kr/')
+        covidembed = discord.Embed(title='코로나19 국내 발생현황', description="", color=0x2f3136, url='http://ncov.mohw.go.kr/')
         covidembed.add_field(name='🦠 확진환자', value=f'{totalcovid}({todaytotalcovid}) 명'
                                                    f'\n\n국내발생: {todaydomecovid} 명\n해외유입: {todayforecovid} 명',
                              inline=False)
